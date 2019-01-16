@@ -77,11 +77,12 @@
             </center>
             <center><img src="enfants.jpg" alt="Enfants cool" width="90%" height="90%"></center>
             <center>
-                <form action="pop_in.html" id="formulaire">
+                <form action="pop_in.html" name="formulaire">
                     <br>
-                    <input type="text" name="firstname" placeholder="Entrez votre adresse email" style="width: 300px;font-size: 15pt;height: 28px;">
+                    <input type="text" id="email" placeholder="Entrez votre adresse email" style="width: 300px;font-size: 15pt;height: 28px;"
+                        onkeyup="success()">
                     <br>
-                    <input id="valider" type="submit" value="Envoyer" style="width: 250px;height:28px;">
+                    <input id="valider" type="submit" value="Envoyer" style="width: 250px;height:28px;" disabled>
                 </form>
             </center>
         </div>
@@ -121,6 +122,18 @@
                 modal.style.display = "none";
             }
         };
+
+        function success() {
+            var email = document.getElementById('email');
+            var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+            if ((document.getElementById("email").value === "") || (!filter.test(email.value))) {
+                document.getElementById('valider').disabled = true;
+            } else {
+                document.getElementById('valider').disabled = false;
+            }
+        }
+
 
     </script>
 
