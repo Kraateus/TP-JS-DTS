@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="pop_in.css">
+    
+</head>
+
+<body>
+
+    <h2>POP-IN</h2>
+
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">OUVRIR</button>
+    <span></span>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <center>
+                <h2> Abonnez-vous à notre newsletter et recevez un enfant gratuit !</h2>
+            </center>
+            <center><img src="enfants.jpg" alt="Enfants cool" width="90%" height="90%"></center>
+            <center>
+                <form name="formulaire">
+                    <br>
+                    <input type="text" id="email" placeholder="Entrez votre adresse email" style="width: 300px;font-size: 15pt;height: 28px;">
+                    <br>
+                    <input id="valider" type="submit" value="Envoyer" style="width: 250px;height:28px;" disabled >
+                </form>
+            </center>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>
