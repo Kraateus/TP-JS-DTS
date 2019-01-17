@@ -1,9 +1,23 @@
 
 document.getElementById("valider").addEventListener("click", function (event) {
-    document.querySelector("span").append("Vous etes bien inscrit , vous allez donc recevoir un enfant gratuit par voie postale sous 5 jours ")
     modal.style.display = "none";
+    $.ajax({
+        url: './email.php',
+        type: 'POST',
+        data: { 'emailrecup': document.getElementById("email").value },
+        success: function () {
+            document.querySelector("span").append("Vous etes bien inscrit , vous allez donc recevoir un enfant gratuit par voie postale sous 5 jours ")
+        },
+        error: function () {
+            var span = document.querySelector("span");
+            span.innerHTML = "Il y'a eu une erreur dans le traitement(AJAX)";
+
+        },
+
+    });
     event.preventDefault()
 });
+
 
 
 document.getElementById("email").addEventListener("keyup", function () {
