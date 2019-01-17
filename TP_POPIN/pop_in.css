@@ -3,6 +3,7 @@ body {
 }
 
 /* The Modal (background) */
+
 .modal {
     display: none;
     /* Hidden by default */
@@ -27,15 +28,17 @@ body {
 }
 
 /* Modal Content */
+
 .modal-content {
     background-color: #ffffff;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 45%;
+    width: 54%;
 }
 
 /* The Close Button */
+
 .close {
     color: #aaaaaa;
     float: right;
@@ -43,9 +46,29 @@ body {
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.close:hover, .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+#valider {
+    width: 35vw;
+    height:28px;
+}
+
+#email {
+    width: 53vw;
+    font-size: 150%;
+    text-align: center;
+    height: 28px;
+}
+
+@media only screen and (max-width: 400px){ /*TAILLE LORSQUE MOBILE*/
+    #email{
+        width: 53vw;
+        font-size: 85%;
+        text-align: center;
+        height: 28px;
+    }
 }
